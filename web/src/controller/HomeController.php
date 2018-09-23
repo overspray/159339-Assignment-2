@@ -1,11 +1,18 @@
 <?php
+/*
+*
+* Junghoe(Peter) Hwang - 16242934
+* Erdem Alpkaya        - 16226114
+* Robert Harper        - 96066919
+*
+*/
 namespace team\a2\controller;
 
 
 /**
  * Class HomeController
  *
- *@package team/a2
+ * @package team/a2
  *
  * Code foundation by:
  * @author  Andrew Gilman <a.gilman@massey.ac.nz>

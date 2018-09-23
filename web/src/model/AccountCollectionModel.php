@@ -1,4 +1,11 @@
 <?php
+/*
+*
+* Junghoe(Peter) Hwang - 16242934
+* Erdem Alpkaya        - 16226114
+* Robert Harper        - 96066919
+*
+*/
 namespace team\a2\model;
 
 /**

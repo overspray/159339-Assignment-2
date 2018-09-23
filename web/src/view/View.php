@@ -1,14 +1,21 @@
 <?php
+/*
+*
+* Junghoe(Peter) Hwang - 16242934
+* Erdem Alpkaya        - 16226114
+* Robert Harper        - 96066919
+*
+*/
 /**
  * Created by PhpStorm.
  * User: andrew
- * Date: 30/08/17
- * Time: 4:38 PM
  */
 
 namespace team\a2\view;
 
 use const team\a2\APP_ROOT;
+use team\a2\exception\customTemplateException;
+
 /**
  * Class View
  *
@@ -49,6 +56,7 @@ class View
             if (file_exists($file)) {
                 $this->template = $file;
             } else {
+                throw new customTemplateException('Template ' . $template . ' not found!');
 //                throw new customException('Template ' . $template . ' not found!');
             }
         } catch (customException $e) {
