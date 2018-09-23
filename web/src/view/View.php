@@ -16,7 +16,14 @@ use const team\a2\APP_ROOT;
  * Limits the accessible scope available to phtml templates.
  *
  * @package team/a2
+ *
+ * Code foundation by:
  * @author  Andrew Gilman <a.gilman@massey.ac.nz>
+ *
+ *
+ * @author  Junghoe Hwang <after10y@gmail.com>
+ * @author Erdem Alpkaya <erdemalpkaya@gmail.com>
+ * @author  Robert Harper   <l.attitude37@gmail.com>
  */
 class View
 {

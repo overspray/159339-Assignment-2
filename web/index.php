@@ -1,15 +1,29 @@
 <?php
 /**
- * 159.339 Internet Programming 2017.2
- * Student ID: 99999999
- * Assignment: 2   Date: 01/09/17
+ * * 159.339 Internet Programming 2018 - Assignment-2
+ *
+ * This is index.php file. Runs Model-View-Controller Banking system simulator .
+ *
+ * @package team/a2
+ *
+ * Student ID: 16242934  - Student Name: Junghoe(Peter) Hwang
+ * Student ID: 16226114  - Student Name: Erdem Alpkaya
+ * Student ID: 96066919  - Student Name: Robert Harper
+ *
+ * Assignment: 2   Date: 30 September 2018
  * System: PHP 7.1
+ *
  * Code guidelines: PSR-1, PSR-2
  *
  * FRONT CONTROLLER - Responsible for URL routing and User Authentication
  *
- * @package team/a2
- * @author  A. Gilman <a.gilman@massey.ac.nz>
+ * Code foundation by:
+ * @author  Andrew Gilman <a.gilman@massey.ac.nz>
+ *
+ *
+ * @author  Junghoe Hwang <after10y@gmail.com>
+ * @author Erdem Alpkaya <erdemalpkaya@gmail.com>
+ * @author  Robert Harper   <l.attitude37@gmail.com>
  **/
 namespace team\a2;
 date_default_timezone_set('Pacific/Auckland');
