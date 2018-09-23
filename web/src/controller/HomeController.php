@@ -1,11 +1,11 @@
 <?php
-namespace agilman\a2\controller;
+namespace team\a2\controller;
 
 
 /**
  * Class HomeController
  *
- * @package agilman/a2
+ * @package team/a2
  * @author  Andrew Gilman <a.gilman@massey.ac.nz>
  */
 class HomeController extends Controller

@@ -1,11 +1,11 @@
 <?php
-namespace agilman\a2\model;
+namespace team\a2\model;
 
 
 /**
  * Class AccountModel
  *
- * @package agilman/a2
+ * @package team/a2
  * @author  Andrew Gilman <a.gilman@massey.ac.nz>
  */
 class AccountModel extends Model

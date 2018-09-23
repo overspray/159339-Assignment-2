@@ -1,12 +1,12 @@
 <?php
-namespace agilman\a2\model;
+namespace team\a2\model;
 
 use mysqli;
 
 /**
  * Class Model
  *
- * @package agilman/a2
+ * @package team/a2
  * @author  Andrew Gilman <a.gilman@massey.ac.nz>
  */
 class Model
@@ -17,7 +17,7 @@ class Model
     const DB_HOST = 'mysql';
     const DB_USER = 'root';
     const DB_PASS = 'root';
-    const DB_NAME = 'agilman_a2';
+    const DB_NAME = 'team_a2';
 
     public function __construct()
     {

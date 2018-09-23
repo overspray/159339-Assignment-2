@@ -1,5 +1,5 @@
 <?php
-namespace agilman\a2\model;
+namespace team\a2\model;
 
 /**
  * Class AccountCollectionModel

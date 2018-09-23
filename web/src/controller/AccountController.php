@@ -1,13 +1,13 @@
 <?php
-namespace agilman\a2\controller;
+namespace team\a2\controller;
 
-use agilman\a2\model\{AccountModel, AccountCollectionModel};
-use agilman\a2\view\View;
+use team\a2\model\{AccountModel, AccountCollectionModel};
+use team\a2\view\View;
 
 /**
  * Class AccountController
  *
- * @package agilman/a2
+ * @package team/a2
  * @author  Andrew Gilman <a.gilman@massey.ac.nz>
  */
 class AccountController extends Controller
