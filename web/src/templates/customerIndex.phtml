@@ -1,0 +1,25 @@
+<?php include "header.phtml" ?>
+    <!---------- Body starts --------------->
+    <h1>Welcome to Massey Bank.</h1>
+    The accounts are:
+    <table>
+        <?php foreach ($customers as $customer) { ?>
+            <tr>
+                <td><?= $customer->getCusid() ?></td>
+                <td><?= $customer->getCusfname() ?></td>
+                <td><?= $customer->getCuslname() ?></td>
+                <td><?= $customer->getCusaddress() ?></td>
+                <td><a href= <?= $linkTo('customerDelete', ['id' => $customer->getCusid()]);?> >delete</a></td>
+            </tr>
+        <?php } ?>
+    </table>
+
+    <a href=<?= $linkTo('customerCreate'); ?>>Create new customer.</a>
+    <a href=<?= $linkTo('loginCreate'); ?>>Create new login.</a>
+    <a href=<?= $linkTo('accCreate'); ?>>Create new customer account.</a>
+    <a href=<?= $linkTo('customer_accCreate'); ?>>Create new transaction.</a>
+    <a href=<?= $linkTo('accountCreate'); ?>>Create new account.</a>
+
+    <br>
+    <!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>

@@ -1,0 +1,37 @@
+<?php include "header.phtml" ?>
+    <!---------- Body starts --------------->
+
+<?php
+if(isset($loginName)){
+    echo 'login <?= $loginName ?> created successfully.';
+}
+?>
+<!DOCTYPE html>
+<body>
+<form>
+    <table border=""0>
+        <tr>
+            <td>Customer Account:</td>
+            <td align = "center"><input type="text" name="login_acc" size="30" /></td>
+        </tr>
+        <tr>
+            <td>Customer Username:</td>
+            <td align = "center"><input type="text" name="login_user" size="30" /></td>
+        </tr>
+        <tr>
+            <td>Customer Password</td>
+            <td align = "center"><input type="text" name="login_pword" size="30" /></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center" ><input type="submit" value="Submit" /> </td>
+        </tr>
+
+
+    </table>
+</form>
+Login <?= $loginId ?> created successfully. <br>
+<a href=<?= $linkTo('loginIndex'); ?>>Back</a>
+</body>
+
+    <!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>

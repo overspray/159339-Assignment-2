@@ -1,0 +1,42 @@
+<?php include "header.phtml" ?>
+    <!---------- Body starts --------------->
+
+<?php
+if(isset($customer)){
+    echo 'Customer <?= $customer ?> created successfully.';
+}
+?>
+<!DOCTYPE html>
+<body>
+<form>
+    <table border=""0>
+        <tr>
+            <td>Customer ID:</td>
+            <td align = "center"><input type="text" name="cus_id" size="30" /></td>
+        </tr>
+        <tr>
+            <td>First Name:</td>
+            <td align = "center"><input type="text" name="cus_fname" size="30" /></td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td align = "center"><input type="text" name="cus_lname" size="30" /></td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td align = "center"><input type="text" name="cus_address" size="30" /></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center" ><input type="submit" value="Submit" /> </td>
+        </tr>
+
+
+    </table>
+</form>
+
+    Customer <?= $CustomerId ?> created successfully. <br>
+    <a href=<?= $linkTo('customerIndex'); ?>>Back</a>
+    <!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>
+
+

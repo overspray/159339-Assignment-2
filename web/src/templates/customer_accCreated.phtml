@@ -1,0 +1,44 @@
+<?php include "header.phtml" ?>
+<!---------- Body starts --------------->
+<?php
+if(isset($cus_acc_id)){
+    echo 'Customer_Acc <?= $customer_accId ?> created successfully.';
+}
+?>
+<!DOCTYPE html>
+<body>
+<form action="<?php echo $action; ?>" method="GET">
+    <table border ="0">
+    <tr>
+        <td>Customer id</td>
+        <td align="center"><input type = "text" name ="cus_acc_cust" size ="30"/></td>
+    </tr>
+    <tr>
+        <td>Account id</td>tr>
+        <td align="center"><input type = "text" name ="cus_acc" size ="30"/></td>
+    </tr>
+    <tr>
+        <td>Deposit / Withdraw</td>
+        <td align="center"><input type= "text" name="cus_acc_type" size ="30"/></td>
+    </tr>
+    <tr>
+        <td>Transaction Amount</td>
+        <td align="center"><input type = "text" name ="cus_acc_amount" size ="30"/></td>
+    </tr>
+    <tr>
+        <td>Transaction Balance</td>
+        <td align="center"><input type = "text" name ="cus_acc_balance" size ="30"/></td>
+    </tr>
+    <tr>
+        <td colspan="2" align="right"><input type = "submit" value ="Submit" /></td>
+    </tr>
+    </table>
+</form>
+<br>
+<a href=<?= $linkTo('customer_accIndex'); ?>>Back</a>
+<br>
+</body>
+
+<!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>
+

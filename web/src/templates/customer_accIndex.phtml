@@ -1,0 +1,25 @@
+<?php include "header.phtml" ?>
+    <!---------- Body starts --------------->
+    <h1>Welcome to First National Bank.</h1>
+    The accounts are:
+    <table>
+        <?php foreach ($customer_accs as $customer_acc) { ?>
+            <tr>
+                <td><?= $customer_acc->getCusAccId() ?></td>
+                <td><?= $customer_acc->getCusAccCust() ?></td>
+                <td><?= $customer_acc->getCusAcc() ?></td>
+                <td><?= $customer_acc->getCusAccTime() ?></td>
+                <td><?= $customer_acc->getCusAccType() ?></td>
+                <td><?= $customer_acc->getCusAccAmount() ?></td>
+                <td><?= $customer_acc->getCusAccBalance() ?></td>
+                <td><a href= <?= $linkTo('customer_accDelete', ['id' => $customer_acc->getCusAccId()]);?> >delete</a></td>
+            </tr>
+        <?php } ?>
+    </table>
+    <a href=<?= $linkTo('accountCreate'); ?>>Create new account.</a>
+    <a href=<?= $linkTo('customerCreate'); ?>>Create new customer.</a>
+    <a href=<?= $linkTo('customer_accCreate'); ?>>Create new account.</a>
+    <a href=<?= $linkTo('accCreate'); ?>>Create my new account.</a>
+    <br>
+    <!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>

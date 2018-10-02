@@ -1,0 +1,22 @@
+<?php include "header.phtml" ?>
+    <!---------- Body starts --------------->
+    <h1>Welcome to ..prepepep1.</h1>
+    The accounts are:
+    <table>
+        <?php foreach ($accs as $acc) { ?>
+            <tr>
+                <td><?= $acc->getAcc_number() ?></td>
+                <td><?= $acc->getAcc_cus() ?></td>
+                <td><?= $acc->getAcc_balance() ?></td>
+                <td><a href= <?= $linkTo('accDelete', ['id' => $acc->getAcc_number()]);?> >delete</a></td>
+            </tr>
+        <?php } ?>
+    </table>
+
+    <a href=<?= $linkTo('accCreate'); ?>>Create new account.</a>
+    <a href=<?= $linkTo('customerCreate'); ?>>Create new customer.</a>
+    <a href=<?= $linkTo('loginCreate'); ?>>Create new login.</a>
+    <a href=<?= $linkTo('customer_accCreate'); ?>>Create my new Tranaction.</a>
+    <br>
+    <!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>
