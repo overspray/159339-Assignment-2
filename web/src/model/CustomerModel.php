@@ -46,6 +46,26 @@ class CustomerModel extends Model
     /**
      * @return int Customer ID
      */
+    private $cus_dob;
+
+    /**
+     * @return int Customer ID
+     */
+    private $cus_phone;
+
+    /**
+     * @return int Customer ID
+     */
+    private $cus_username;
+
+    /**
+     * @return int Customer ID
+     */
+    private $cus_password;
+
+    /**
+     * @return int Customer ID
+     */
     public function getCusid()
     {
         return $this->cus_id;
@@ -73,6 +93,34 @@ class CustomerModel extends Model
     public function getCusaddress()
     {
         return $this->cus_address;
+    }
+    /**
+     * @return string Customer Address
+     */
+    public function getCusdob()
+    {
+        return $this->cus_dob;
+    }
+    /**
+     * @return string Customer Address
+     */
+    public function getCusphone()
+    {
+        return $this->cus_phone;
+    }
+    /**
+     * @return string Customer Address
+     */
+    public function getCususername()
+    {
+        return $this->cus_username;
+    }
+    /**
+     * @return string Customer Address
+     */
+    public function getCuspassword()
+    {
+        return $this->cus_password;
     }
     /**
      * @param string $name Account name
@@ -104,6 +152,30 @@ class CustomerModel extends Model
 
         return $this;
     }
+    public function setCusdob(string $cus_dob)
+    {
+        $this->cus_dob = $cus_dob;
+
+        return $this;
+    }
+    public function setCusphone(string $cus_phone)
+    {
+        $this->cus_phone = $cus_phone;
+
+        return $this;
+    }
+    public function setCususername(string $cus_username)
+    {
+        $this->cus_username = $cus_username;
+
+        return $this;
+    }
+    public function setCuspassword(string $cus_password)
+    {
+        $this->cus_password = $cus_password;
+
+        return $this;
+    }
 
     /**
      * Loads account information from the database
@@ -123,6 +195,10 @@ class CustomerModel extends Model
         $this->cus_fname = $result['cus_fname'];
         $this->cus_lname = $result['cus_lname'];
         $this->cus_address = $result['cus_address'];
+        $this->cus_dob = $result['cus_dob'];
+        $this->cus_phone = $result['cus_phone'];
+        $this->cus_username = $result['cus_username'];
+        $this->cus_password = $result['cus_password'];
 
 
         return $this;
@@ -139,13 +215,18 @@ class CustomerModel extends Model
         $cus_fname = $this->cus_fname ;
         $cus_lname = $this->cus_lname;
         $cus_address = $this->cus_address;
+        $cus_dob = $this->cus_dob;
+        $cus_phone = $this->cus_phone;
+        $cus_username = $this->cus_username;
+        $cus_password = $this->cus_password;
 
         echo "this"."cus_id";
 
 
         if (isset($this->cus_id)) {
             //New customer - Perform INSERT"
-            if (!$result = $this->db->query("INSERT INTO customer VALUES('$cus_id','$cus_fname','$cus_lname','$cus_address');")) {
+            if (!$result = $this->db->query("INSERT INTO customer VALUES('$cus_id','$cus_fname','$cus_lname',
+                                            '$cus_address','$cus_dob','$cus_phone','$cus_username','$cus_password');")) {
                 echo "throw new ...";
                 echo gettype($cus_id).gettype($cus_fname).gettype($cus_lname).gettype($cus_address);
             }

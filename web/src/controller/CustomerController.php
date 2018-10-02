@@ -48,11 +48,19 @@ class CustomerController extends Controller
         $cus_fname = htmlspecialchars($_GET["cus_fname"]);
         $cus_lname = htmlspecialchars($_GET["cus_lname"]);
         $cus_address = htmlspecialchars($_GET["cus_address"]);
+        $cus_dob = htmlspecialchars($_GET["cus_dob"]);
+        $cus_phone = htmlspecialchars($_GET["cus_phone"]);
+        $cus_username = htmlspecialchars($_GET["cus_username"]);
+        $cus_password = htmlspecialchars($_GET["cus_password"]);
 
         $customer->setCusid($cus_id);
         $customer->setCusfname($cus_fname); // will come from Form data
         $customer->setCuslname($cus_lname);
         $customer->setCusaddress($cus_address);
+        $customer->setCusdob($cus_dob);
+        $customer->setCusphone($cus_phone);
+        $customer->setCususername($cus_username);
+        $customer->setCuspassword($cus_password);
         $customer->save();
         $view = new View('customerCreated');
         echo $view->render();

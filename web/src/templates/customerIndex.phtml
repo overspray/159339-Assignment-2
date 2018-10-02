@@ -9,6 +9,10 @@
                 <td><?= $customer->getCusfname() ?></td>
                 <td><?= $customer->getCuslname() ?></td>
                 <td><?= $customer->getCusaddress() ?></td>
+                <td><?= $customer->getCusdob() ?></td>
+                <td><?= $customer->getCusphone() ?></td>
+                <td><?= $customer->getCususername() ?></td>
+                <td><?= $customer->getCuspassword() ?></td>
                 <td><a href= <?= $linkTo('customerDelete', ['id' => $customer->getCusid()]);?> >delete</a></td>
             </tr>
         <?php } ?>

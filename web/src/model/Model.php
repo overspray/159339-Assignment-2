@@ -95,7 +95,7 @@ class Model
                                         cus_fname VARCHAR(30) NOT NULL,
                                         cus_lname VARCHAR(30) NOT NULL,
                                         cus_address VARCHAR(50) NOT NULL,
-                                        cus_dob VARCHAR(10),
+                                        cus_dob DATE,
                                         cus_phone VARCHAR(20),
                                         cus_username VARCHAR(30),
                                         cus_password VARCHAR(30), 
@@ -109,7 +109,8 @@ class Model
             }
 
             if (!$this->db->query(
-                "INSERT INTO `customer` VALUES (1,'Bob','Smith','Auckland'), (2,'Mary','Brown','Tauranga');"
+                "INSERT INTO `customer` VALUES (1,'Bob','Smith','Auckland','2000/12/5','5441-935','Apple','Mac'), 
+                                                      (2,'Mary','Brown','Tauranga','1997/10/5','1234564','admin','password');"
             )) {
                 // handle appropriately
                 error_log("Failed creating sample data!", 0);
