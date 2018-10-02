@@ -94,7 +94,11 @@ class Model
                                         cus_id INT(10) NOT NULL,
                                         cus_fname VARCHAR(30) NOT NULL,
                                         cus_lname VARCHAR(30) NOT NULL,
-                                        cus_address VARCHAR(50) NOT NULL, 
+                                        cus_address VARCHAR(50) NOT NULL,
+                                        cus_dob VARCHAR(10),
+                                        cus_phone VARCHAR(20),
+                                        cus_username VARCHAR(30),
+                                        cus_password VARCHAR(30), 
                                         PRIMARY KEY(cus_id) );"
 
             );
